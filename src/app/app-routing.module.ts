@@ -12,9 +12,12 @@ const routes: Routes = [
         path: '',
         component: MainLayoutComponent,
         children: [
-            { path: 'home', component: HomeComponent }
+            { path: 'home', component: HomeComponent },
+            { path: 'todo', loadChildren: () => import('./modules/todo/todo.module').then(m => m.TodoModule) },
+            { path: 'customer', loadChildren: () => import('./modules/customer/customer.module').then(m => m.CustomerModule) }
         ]
-    }
+    },
+
 ];
 
 @NgModule({
