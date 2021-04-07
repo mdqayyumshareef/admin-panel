@@ -1,14 +1,17 @@
-<div class="flex-container">
-    <mat-drawer-container>
-        <mat-drawer [mode]="sidebarMode" [opened]="isSidebarOpen">
+<!-- flex-container -->
+<div class="h-full flex flex-col">
+    <app-header (toggleSidebar)="toggleSidebar()"></app-header>
+    <mat-sidenav-container class="flex-grow">
+        <mat-sidenav mode="side" [opened]="isSidebarOpen" class="w-60 bg-gray-100 border-r-0">
             <app-sidebar></app-sidebar>
-        </mat-drawer>
-        <mat-drawer-content>
-            <app-header (toggleSidebar)="toggleSidebar()"></app-header>
-            <div class="page-content">
-                <router-outlet></router-outlet>
+        </mat-sidenav>
+        <mat-sidenav-content class="bg-gray-100">
+            <div class="h-full flex flex-col">
+                <div class="flex-grow container px-6 my-4">
+                    <router-outlet></router-outlet>
+                </div>
+                <app-footer></app-footer>
             </div>
-            <app-footer></app-footer>
-        </mat-drawer-content>
-    </mat-drawer-container>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
 </div>

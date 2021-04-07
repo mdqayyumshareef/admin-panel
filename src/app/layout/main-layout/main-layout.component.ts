@@ -8,17 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class MainLayoutComponent implements OnInit {
 
     isSidebarOpen = true;
-    sidebarMode = "side";
-
     constructor() { }
 
-    ngOnInit() {
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            // Any mobile device (phones or tablets).
-            this.isSidebarOpen = false;
-            this.sidebarMode = "over";
-        }
-    }
+    ngOnInit() {}
 
     toggleSidebar() {
         this.isSidebarOpen = !this.isSidebarOpen;
