@@ -24,7 +24,7 @@
     "@angular/router": "~11.2.0",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "autoprefixer": "^10.0.4",
-    "postcss": "^8.1.10",
+    "postcss": "^8.2.10",
     "rxjs": "~6.6.0",
     "tailwindcss": "^2.0.1",
     "tslib": "^2.0.0",
